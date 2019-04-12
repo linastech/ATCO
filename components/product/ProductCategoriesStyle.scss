@@ -1,0 +1,11 @@
+.wrapper{
+	@include listReset;
+	background-color: $accent-color;
+	align-self: flex-start;
+	> li{
+		padding: 8px 10px;
+	}
+	a{
+		color: #fff;
+	}
+}

@@ -1,0 +1,61 @@
+@import 'node_modules/normalize-scss/sass/normalize/import-now';
+
+body{
+	color: $primary-color;
+}
+:global(#__next > div){
+  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	> main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+a{
+	text-decoration: none;
+	color: $primary-color;
+}
+a:hover{
+	text-decoration: underline;
+}
+*{
+	box-sizing: border-box;
+	outline: none;
+}
+@media screen and (min-width: 1270px) {
+	:root{
+		--content-width: 1200px;
+	}
+}
+@media screen and (max-width: 1270px) {
+	:root{
+		--content-width: 100%;
+	}
+}
+
+
+$minSize: 		12;
+$maxSize: 		14;
+$minViewPort: 320;
+$maxViewPort: 1600;
+
+html{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: calc(#{$minSize}px + (#{$maxSize} - #{$minSize}) * ((100vw - #{$minViewPort}px) / (#{$maxViewPort} - #{$minViewPort})));
+	line-height: 1.3;
+}
+
+p{
+	font-size: 1.05em;
+}
+
+$hminSize: 		20;
+$hmaxSize: 		27;
+$hminViewPort: 320;
+$hmaxViewPort: 1600;
+
+h1{
+	font-size: calc(#{$hminSize}px + (#{$hmaxSize} - #{$hminSize}) * ((100vw - #{$hminViewPort}px) / (#{$hmaxViewPort} - #{$hminViewPort}))) !important;
+}

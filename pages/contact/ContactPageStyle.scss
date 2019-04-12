@@ -1,0 +1,89 @@
+.wrapper{
+	width: var(--content-width);
+	margin: 0 auto;
+	display: flex;
+}
+.marker{
+	background: url(/static/images/marker.png);
+	height: 30px;
+	width: 21px;
+	display: inline-flex;
+	transform: translate(-50%, -50%);
+	background-size: cover;
+}
+.col{
+	width: 50%;
+	padding: 0 15px;
+}
+.introText{
+	color: #fff;
+	position: fixed;
+	z-index: 2;
+	font-size: 1.7em;
+	width: 500px;
+	text-align: center;
+	left: 50%;
+	top: 200px;
+	text-shadow: 0px 0px 15px #000;
+}
+.map{
+	height: 400px;
+	margin: 30px 0 30px;
+} 
+.subTitle{
+	font-weight: bold;
+	margin-top: 20px;
+}
+.bold{
+	color: #010a10;
+	font-weight: bold;
+	margin-right: 6px;
+}
+.info{
+	color: #010a10;
+}
+.colRight{
+	margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1270px) {
+	.wrapper{
+		flex-direction: column;
+		padding: 0;
+	}
+	.intro{
+		margin-top: var(--mobile-menu-height);
+    background-size: auto 100%;
+		background-attachment: unset;
+		position: relative;
+	}
+	.introText{
+		left: auto;
+		right: 0;
+		position: absolute;
+	}
+	.col{
+		width: 100%;
+		flex: 1;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.intro{
+		height: 40vh;
+	}
+	.introText{
+		top: auto;
+		bottom: 10%;
+		font-size: 1.5em;
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.introText{
+		font-size: 1.2em;
+		width: 270px;
+		bottom: 30%;
+	}
+}

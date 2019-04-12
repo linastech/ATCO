@@ -1,0 +1,78 @@
+.pageBody{
+	padding: 0px; 
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+	width: 100%;
+	border-spacing: 0;
+	font-size: 13px;
+} 
+.headerLeft{
+	background-color: #009ee0;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.7em;
+}
+.headerRight{
+	background-color: #4a4a4a;
+	text-align: right;
+	height: 60px;
+}
+.logo{
+	height: 50%;
+}
+.content{
+	background-color: #ededed;
+	height: 200px;
+	padding: 10px;
+	vertical-align: top;
+	color: #7d7d7d;
+}
+.name{
+	font-weight: bold;
+}
+.social{
+	background-color: #8bbae4;
+}
+.infoWrapper{
+	padding: 0 2% 10px;
+	border-bottom: 1px solid #8bbae4;
+}
+.socialIconsWrapper{
+	height: 100%;
+	padding: 10px 10px;
+	text-align: center;
+}
+.contactWrapper{
+}
+.icon{
+	margin: 0 5px;
+	cursor: pointer;
+	display: inline-block;
+}
+.icon img{
+	display: block;
+}
+.bold{
+	font-weight: bold;
+	display: inline-block;
+	width: 80px;
+}
+.breakLine{
+	margin-left: 80px;
+	display: inline-block;
+}
+.infoRow{
+	margin-top: 5px;
+}
+.infoTitle{
+	text-align: center;
+	font-size: 1.4em;
+	color: #2f75b4;
+	margin: 10px;
+}
+.info{
+
+} 

@@ -1,0 +1,37 @@
+@mixin listReset{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+@mixin gradiantHeroBG{
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 50px 115px $accent-color;
+  }
+} 
+@mixin overlapingHeroTitle{
+  position: relative;
+  color: #fff;
+  margin: -80px auto 0;
+  z-index: 1;
+  h1{
+    color: #fff;
+    font-weight:  normal;
+    margin-bottom: 60px;
+  }
+}
+@mixin resetList{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+@mixin alignHorizontally{
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

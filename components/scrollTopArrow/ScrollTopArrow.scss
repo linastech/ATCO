@@ -1,0 +1,23 @@
+.wrapper{
+	width: 44px;
+	height: 95px;
+	background: url(/static/images/about/back_top.png);
+	position: fixed;
+	right: 5%;
+	top: 50%;
+	margin-top: -48px;
+	cursor: pointer;
+	z-index: 10;
+}
+@media screen and (max-width: 1400px) {
+	.wrapper{
+		width: 24px;
+		height: 50px;
+		background-size: 100%;
+	}
+}
+@media screen and (max-width: 400px) {
+	.wrapper{
+		display: none;
+	}
+}

@@ -1,0 +1,22 @@
+.wrapper{
+  overflow: hidden;
+}
+.heroImgMobile{
+  display: none;
+}
+.heroImg{
+  width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .wrapper{
+    max-height: 40vh !important;
+    margin-top: 50px;
+  }
+  .heroImg{
+    display: none;
+  }
+  .heroImgMobile{
+    width: 100%;
+    display: block;
+  }
+}

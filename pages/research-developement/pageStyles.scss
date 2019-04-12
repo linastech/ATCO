@@ -1,0 +1,36 @@
+.wrapper{
+	width: var(--content-width);
+	margin: 0 auto;
+  padding: 0 100px 50px;
+  p {
+    font-size: 1.2em;
+  }
+  .title{
+    text-align: center;
+    margin-bottom: 5px;
+    span{
+      font-weight: normal;
+    }
+  }  
+  .goalsLogo{
+    @include alignHorizontally;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+	.intro_mobile{
+		display: block;
+		height: auto;
+		width: 100%;
+		margin-top: var(--mobile-menu-height);
+	}
+	.wrapper{
+		padding: 0 2%;
+		text-align: justify;
+	}
+	.intro{
+		display: none;
+		margin-top: var(--mobile-menu-height);
+	}
+}

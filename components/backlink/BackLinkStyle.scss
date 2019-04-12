@@ -1,0 +1,14 @@
+.button{
+  width: 39px;
+  height: 27px;
+  background: url(/static/images/back_arrow.png);
+  cursor: pointer;
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 10px 0;
+  a{
+    font-weight:bold;
+    font-size: 1.2em;
+    line-height: 25px;
+  }
+}

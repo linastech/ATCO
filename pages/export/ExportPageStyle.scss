@@ -1,0 +1,47 @@
+.hero{
+	background: url(/static/images/export/export_intro.jpg);
+	background-size: 100% auto;
+	height: 500px;	
+	position: relative;
+}
+.truck{
+	position: absolute;
+	bottom: 0px;
+	height: 35%;
+}
+
+.pageWrapper{
+	margin: 0 auto 50px;
+	padding: 0 100px;
+	width: var(--content-width);
+}
+.pageWrapper p{
+	margin-bottom: 20px;
+	text-align: justify;
+	font-size: 1.2em;
+}
+.exportLogo{
+  display: block;
+	margin:0 auto 50px;
+}
+.title{
+	text-align: center;
+	margin: 50px 0 40px;
+}
+.requestTitle{
+	text-align: center;
+}
+.requestTitle span{
+	font-weight: normal;
+}
+@media screen and (max-width: 1270px) {
+	.pageWrapper{
+		padding: 0 2%;
+	}
+	.intro{ display: none; }
+	.mobileIntro{
+		margin-top: var(--mobile-menu-height);
+		display: block;
+		width: 100%;
+	}
+}

@@ -1,0 +1,44 @@
+.wrapper{
+	width: var(--content-width);
+	margin: 0 auto;
+	padding: 0 100px 50px;
+  p{
+    font-size: 1.2em;
+  }
+  h1{
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .sectionIcon{
+    display: block;
+    margin: 0 auto;
+  }
+  .requestTitle{
+    text-align: center;
+    margin-top: 60px;
+    span{
+      font-weight: normal;
+    }
+  }
+}
+
+@media screen and (max-width: 1270px) {
+	.pageWrapper{
+		padding: 0 2%;
+		text-align: justify;
+	}
+	.intro{
+		margin-top: var(--mobile-menu-height);
+		background-attachment: unset;
+		background-size: auto 100%;
+	}
+	.introText{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.intro{
+		height: 40vh;
+	}
+}

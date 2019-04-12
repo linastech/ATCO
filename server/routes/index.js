@@ -1,0 +1,16 @@
+const routes = module.exports = require('next-routes')()
+
+routes
+  .add({name: 'home', pattern: '/', page: '/home/HomePage'})
+  .add({name: 'about', pattern: '/about', page: '/about/AboutPage'})
+  .add({name: 'products', pattern: '/products', page: '/products/ProductsPage'})
+  .add({name: 'product', pattern: '/product/:slug', page: '/product/ProductPage'})
+  .add({name: 'productsSelectedCat', pattern: '/products/:marketstatus/:category', page: '/products/ProductsPage'})
+  .add({name: 'productsSelectedLetter', pattern: '/products/:marketstatus/:category/:letter', page: '/products/ProductsPage'})
+  .add({name: 'researchAndDevelopement', pattern: '/research-developement', page: '/research-developement/RnDPage'})
+  .add({name: 'careers', pattern: '/careers', page: '/careers/CareersPage'})
+  .add({name: 'partnership', pattern: '/partnership', page: '/partnership/PartnershipPage'})
+  .add({name: 'export', pattern: '/export', page: '/export/ExportPage'})
+  .add({name: 'media', pattern: '/media', page: '/media/MediaPage'})
+  .add({name: 'mediaPost', pattern: '/media/:slug', page: '/media-post/MediaPostPage'})
+  .add({name: 'contact', pattern: '/contact', page: '/contact/ContactPage'})

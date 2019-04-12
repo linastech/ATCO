@@ -1,0 +1,321 @@
+
+
+$menuWidth: 1165px;
+
+:global(.atcovet) .menuWrapper{ background-color: #00509f; }
+:global(.atcohuman) .menuWrapper{ background-color: #0072bc; }
+
+@media screen and (min-width: 1270px) {
+	header{
+		position: fixed;
+		width: 100%;
+		z-index: 20;
+		font-size: 1.2em;
+		top: 0;
+	}
+	header::before{
+		content: '';
+		height: 25px;
+		background-color: #0072bc;
+		position: relative;
+		opacity: .7;
+		display: block;
+	}
+	.menuWrapper{
+		z-index: 2;
+		position: relative;
+	}
+	.subMenuExpand{
+		// display: none;
+	}
+	.mobileHomeLink{
+		display: none !important;
+	}
+	.menuInnerWrapper{
+		width: $menuWidth;
+		display: grid;
+		grid-template-columns: auto 1fr 140px;
+		position: relative;
+		left: 50%;
+		margin-left: -($menuWidth / 2);
+	}
+	.switch{
+		background-color: #fff;
+		padding: 0 20px 0 10px;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid #d7d7d7;
+
+	}
+	.switch a, .menu a, .menu .subParent{
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	:global(.atcovet) .switch a{ color: #00509f; }
+	:global(.atcohuman) .switch a{ color: #0072bc; }
+	.menu{
+    @include resetList;
+		padding: 0 4px;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
+	.menu li{
+		display: block;
+		height: 100%;
+		position: relative;
+		flex: 1 auto;
+		padding: 0 1px;
+	}
+	.menu a, .menu .subParent{
+		display: inline-flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		color: #fff;
+    transition: all 350ms ease-in-out;
+    cursor: pointer;
+	}
+	.subParent{
+		cursor: pointer;
+	}
+	:global(.atcovet) .menu a:hover, :global(.atcovet) .menu .active,
+	:global(.atcovet) .menu  .subParent:hover{
+		background: #ed2027;
+	}
+	:global(.atcohuman) .menu a:hover, :global(.atcohuman) .menu .active,
+	:global(.atcohuman) .menu  .subParent:hover{
+		background: #ed9e19;
+	}
+	.menu li:hover .subMenu{
+		display: block;
+	}
+	.subMenu{
+		position: absolute;
+		width: 220px;
+		z-index: 1;
+		top: 100%;
+		padding-top: 5px;
+		left: 0px;
+		cursor: default !important;
+		display: none;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 5px;
+			right: 0;
+			bottom: 0;
+			opacity: 0.8;
+		}
+		a{
+			position: relative;
+			z-index: 1;
+			font-size: .7em;
+			text-transform: none;
+			font-weight: normal;
+			display: block;
+			padding: 3px 10px;
+			&:hover{
+				text-decoration: underline;
+				background: none !important;
+			}
+		}
+	}
+	:global(.atcohuman) .subMenu::before{
+		background: #d48d12;
+	}
+	:global(.atcovet) .subMenu::before{
+		background: #f26267 !important;
+	}
+	.subMenu a:first-child{
+		padding-top: 10px;
+	}
+	.subMenu a:last-child{
+		padding-bottom: 10px;
+	}
+	.rightCol{
+		position: relative;
+		.stripes{
+			padding: 2px 0;
+			background: #fff;
+			width: 999%;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 140px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.stripe{
+				width: 100%;
+				height: calc(100% / 3.3);
+				border-radius: 3px;
+			}
+		}
+	}
+	:global(.atcohuman) .stripe:nth-child(1){ background-color: #80BA27; }
+	:global(.atcohuman) .stripe:nth-child(2){ background-color: #0077BE; }
+	:global(.atcohuman) .stripe:nth-child(3){ background-color: #F39600; }
+
+	:global(.atcovet) .stripe:nth-child(1){ background-color: #878786; }
+	:global(.atcovet) .stripe:nth-child(2){ background-color: #004A97; }
+	:global(.atcovet) .stripe:nth-child(3){ background-color: #EB0028; }
+
+	.logoWrapper{
+		margin-top: -25px;
+		height: 75px;
+		background: #fff;
+		a{
+			display: inline-block;
+			height: 100%;
+		}
+		.logo{
+			height: 100%;
+		}
+	}
+	.loginButton{
+		position: absolute;
+		bottom: 110%;
+		right: 100%;
+		width: 50px;
+	}
+	.loginButton a{
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: .8em;
+	}
+	.loginButton a:hover{
+		text-decoration: underline;
+	}
+	.mobileMenu, .mobileLogo{
+		display: none;
+	}
+
+	@media screen and (max-width: 1500px) {
+		.switch{
+			padding-right: 15px; 
+		}
+		.searchWrapper{
+			right: 30px;
+		}
+	}
+	@media screen and (max-width: 1365px) {
+		header{
+			font-size: 1.2em;
+		}
+		.menuInnerWrapper{
+			width: 100%;
+			margin: 0;
+			left: 0px;
+		}
+	}
+}
+@media screen and (max-width: 1270px) {
+	$barHeight: 50px;
+
+	header{
+		position: fixed;
+		width: 100%;
+		height: $barHeight;
+		background: #fff;
+		z-index: 10;
+		.menuWrapper, .menuInnerWrapper{ height: 100%; width: 100%; }
+	}
+	nav{
+		width: 100%;
+		height: 100%;
+	}
+	.mobileMenu{
+		height: 100%;
+		display: flex;
+		width: 50px;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		img{
+			width: 30px;
+		}
+	}
+	.menuInnerWrapper{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.switch{
+		flex: 1;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 5px;
+		a{
+			align-self: flex-end;
+			color: #fff;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+	.mobileLogo{
+		height: 100%;
+		img{
+			height: 100%;
+		}
+	}
+	.menu{
+		
+		flex-grow: 1;
+		width: 100%;
+		transition: transform 300ms ease-in-out;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		background: #fff;
+		max-height: calc(100vh - #{$barHeight});
+		height: auto;
+		transform: translateX(-100%);
+		&.activeMob{
+			transform: translateX(0);
+		}
+		li{
+			border-bottom: 1px solid #e0e0e0;
+		}
+		a{
+			display: block;
+			padding: 10px 20px;
+			width: 100%;
+			color: #575757;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+	.subMenu{
+		border-top: 1px solid #e0e0e0;
+		width: 100%;
+		padding-left: 20px;
+		display: none;
+		a{
+			border-bottom: 1px solid #a8d0ff;
+		}
+		a:last-child{
+			border-bottom: 0px;
+		}
+		&.subMenuOpen{
+			display: block;
+		}
+	}
+	.subMenuExpand{
+		border: solid black;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		padding: 3px;
+		transform: rotate(45deg);
+		margin-left: 10px;
+		cursor: pointer;
+		-webkit-transform: rotate(45deg);
+	}
+	.rightCol{
+		display: none;
+	}
+}

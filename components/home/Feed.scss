@@ -1,0 +1,77 @@
+.horLine{
+	border-bottom: 1px solid $primary-color;
+	margin: 20px 0;
+}
+.wrapper{
+	width: var(--content-width);
+	margin: 0 auto;
+	> h1{
+		font-weight: normal;
+		margin-bottom: 30px;
+	}
+	.list{
+		@include listReset;
+		li{
+			position: relative;
+			height: 430px;
+			margin-bottom: 60px;
+			border: 2px solid $primary-color;
+			&:last-child .infoWrapper{
+				right: auto;
+				left: -50px;
+			}
+			.image {
+				height: 100%;
+				background-size: cover;
+				background-position: center
+			}
+			.infoWrapper{
+				position: absolute;
+				bottom: 55px;
+				width: 320px;
+				right: -50px;
+				color: #fff;
+				padding: 10px 30px;
+				h2{
+					font-size: 1.7em;
+					font-weight: normal;
+					letter-spacing: 0.8px;
+					line-height: 1.6em;
+					margin: 0 0 0.4em;
+				}
+				a{
+					position: relative;
+					text-decoration: none;
+					font-weight: bold;
+					color: #fff;
+					&::after{
+						position: absolute;
+						bottom: -1px;
+						left: 0;
+						content: '';
+						height: 1px;
+						background: #fff;
+						width: 0;
+						transition: width .3s ease-in-out;
+					}
+					&:hover::after{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+:global(.atcohuman) .infoWrapper{ background-color: $human-color; }
+:global(.atcovet) .infoWrapper{ background-color: $vet-color; }
+
+
+@media screen and (max-width: 1270px) {
+  .wrapper{
+    padding: 0 2%;
+  }
+  .wrapper .list li .infoWrapper{
+    right: 0; 
+  }
+}

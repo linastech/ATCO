@@ -1,0 +1,26 @@
+.hero{
+  position: relative;
+  overflow: hidden;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 50px 115px $primary-color;
+  }
+}
+.wrapper{
+  position: relative;
+  z-index: 1;
+  width: var(--content-width);
+  margin: -80px auto 0;
+  .date{
+    color: #fff;
+  }
+  h1{
+    color: #fff;
+    font-weight:  normal;
+    margin-bottom: 50px;
+  }
+}

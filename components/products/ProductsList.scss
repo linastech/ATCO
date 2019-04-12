@@ -1,0 +1,40 @@
+.category{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.letters{
+  @include listReset;
+  display: block;
+  width: 100%;
+  margin: 10px 0 10px;
+  > li{
+    display: inline-block;
+    margin: 0 0 0 20px;
+    font-weight: bold;
+  }
+  a{
+    transition: all 200ms ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover,
+    &.active{
+      color: $red;
+    }
+  }
+}
+.productsWrapper{
+	overflow: hidden;
+	transition: all .3s ease-in-out;
+	padding-top: 0px;
+	margin-left: 5px;
+	box-sizing: content-box;
+	&.active{
+		padding-top: 80px;
+	}
+}
+.notFound{
+	text-align: center;
+	font-size: .8em;
+	color: $orange-highlight;
+}
