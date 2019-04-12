@@ -1,5 +1,3 @@
-
-
 $menuWidth: 1165px;
 
 :global(.atcovet) .menuWrapper{ background-color: #00509f; }
@@ -84,11 +82,11 @@ $menuWidth: 1165px;
 	}
 	:global(.atcovet) .menu a:hover, :global(.atcovet) .menu .active,
 	:global(.atcovet) .menu  .subParent:hover{
-		background: #ed2027;
+		background: $vet-color;
 	}
 	:global(.atcohuman) .menu a:hover, :global(.atcohuman) .menu .active,
 	:global(.atcohuman) .menu  .subParent:hover{
-		background: #ed9e19;
+		background: $human-color;
 	}
 	.menu li:hover .subMenu{
 		display: block;
@@ -126,10 +124,10 @@ $menuWidth: 1165px;
 		}
 	}
 	:global(.atcohuman) .subMenu::before{
-		background: #d48d12;
+		background: $human-color;
 	}
 	:global(.atcovet) .subMenu::before{
-		background: #f26267 !important;
+		background: $vet-color !important;
 	}
 	.subMenu a:first-child{
 		padding-top: 10px;
@@ -265,7 +263,7 @@ $menuWidth: 1165px;
 		}
 	}
 	.menu{
-		
+    @include listReset;
 		flex-grow: 1;
 		width: 100%;
 		transition: transform 300ms ease-in-out;

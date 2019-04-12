@@ -1,6 +1,9 @@
 import React from 'react'
+import {Router} from 'router'
 import classNames from 'classnames'
 import { connect } from 'react-redux'
+import Zenscroll from 'zenscroll'
+import _ from 'lodash'
 import NextSeo from 'next-seo'
 import Hero from 'heroComponent'
 import HeroSection from 'components/about/Section'
@@ -9,24 +12,20 @@ import CSS from './AboutPageStyle.scss'
 
 class About extends React.Component {
 	componentDidMount(){
-		// setTimeout(() => {
-      // this.props.pageTransitionReadyToEnter()
-			// this.setState({ loaded: true })
-			
-			// if(window.location.hash) { 
-			// 	Zenscroll.center(this['section-'+window.location.hash.substring(1)])
-			// }
-	
-			// window.addEventListener('hashchange', this.handleOnUrlChange, false)	
-    // }, 600)
+    this.handleRouteChange()
+
+    Router.events.on('routeChangeComplete', url => {
+      if(Router.router.pathname == '/about/AboutPage')
+        this.handleRouteChange()
+    })
 	}
 	componentWillUnmount() {
-		// window.removeEventListener('hashchange', this.handleOnUrlChange, false)
-	}
-	handleOnUrlChange = () => {
-		// const hash = window.location.hash.substring(1)
-		// Zenscroll.center(this['section-'+hash])
-	}
+		Router.events.off('routeChangeComplete', this.handleRouteChange)
+  }
+  handleRouteChange(){
+    if(_.hasIn(Router.router.query, 'section'))
+      Zenscroll.center(this['section-'+Router.router.query.section])
+  }
   render() {
     const {pageType} = this.props
     return (

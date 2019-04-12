@@ -1,7 +1,6 @@
 import {Link, Router} from 'router'
 import {withRouter} from 'next/router'
 import classNames from 'classnames'
-import AboutSubMenu from './AboutSubMenu'
 import CSS from './Head.scss'
 
 class Navigation extends React.Component {
@@ -17,6 +16,15 @@ class Navigation extends React.Component {
 
     this.setState({selected: path})
   }
+  handleAboutLink = (e, section) =>{
+    e.preventDefault()
+    
+    Router.pushRoute(
+      'aboutSection',
+      {section: section},
+      { shallow: Router.router.pathname == '/about/AboutPage' }
+    )
+  }
   render(){
     const {selected} = this.state
 
@@ -28,6 +36,16 @@ class Navigation extends React.Component {
           </li>
           <li>
           	<a onClick={(e) => this.handleClick(e, 'about', '/about/AboutPage')} className={classNames({[CSS.active]: selected == '/about/AboutPage'})}>About</a>
+
+            <div className={classNames(CSS.subMenu)}>
+              <a onClick={(e) => this.handleAboutLink(e, 'values')}>Our Values</a>
+              <a onClick={(e) => this.handleAboutLink(e, 'certifications')}>Certifications and Awards</a>
+              <a onClick={(e) => this.handleAboutLink(e, 'facility')}>Facility</a>
+              <a onClick={(e) => this.handleAboutLink(e, 'mission')}>Our Mission</a>
+              <a onClick={(e) => this.handleAboutLink(e, 'vision')}>Our Vission</a>
+              <a onClick={(e) => this.handleAboutLink(e, 'objective')}>Our Objective</a>
+              <a onClick={(e) => this.handleAboutLink(e, 'partners')}>Our Partners</a>
+            </div>
           </li>
           <li>
             <a onClick={(e) => this.handleClick(e, 'products', '/products/ProductsPage')} className={classNames({[CSS.active]: selected == '/products/ProductsPage'})}>Our Products</a>

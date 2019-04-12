@@ -79,51 +79,53 @@ export default class PartnershipForm extends React.Component {
 				<Form className={FORM.labeled} onSubmit={this.submit} getApi={this.setFormApi}>
 					{({ formState }) => (
 						<React.Fragment>
-							<label className={FORM.label} htmlFor="country">Country *</label>
+							<label className={FORM.label} htmlFor="country">Country<span className={FORM.required}>*</span></label>
 							{formState.errors.country && <div className={FORM.errorBox}>{formState.errors.country}</div> }
 							<Select className={FORM.input} field="country" id="country" validate={this.validateCountry}>
 								<CountriesOptionsList />
 							</Select>  
 
-							<label className={FORM.label} htmlFor="company-name">Company Name *</label>
+							<label className={FORM.label} htmlFor="company-name">Company Name<span className={FORM.required}>*</span></label>
 							{formState.errors['company-name'] && <div className={FORM.errorBox}>{formState.errors['company-name']}</div> }
 							<Text className={FORM.input} field="company-name" id="company-name" validate={this.validateCompanyName} />
 							
-							<label className={FORM.label} htmlFor="company-phone">Company Phone *</label>
+							<label className={FORM.label} htmlFor="company-phone">Company Phone<span className={FORM.required}>*</span></label>
 							{formState.errors['company-phone'] && <div className={FORM.errorBox}>{formState.errors['company-phone']}</div> }
 							<Text className={FORM.input} field="company-phone" id="company-phone" validate={this.validateCompanyPhone} />
 							
-							<label className={FORM.label} htmlFor="company-fax">Company Fax *</label>
+							<label className={FORM.label} htmlFor="company-fax">Company Fax<span className={FORM.required}>*</span></label>
 							{formState.errors['company-fax'] && <div className={FORM.errorBox}>{formState.errors['company-fax']}</div> }
 							<Text className={FORM.input} field="company-fax" id="company-fax" validate={this.validateCompanyFax} />
 							
-							<label className={FORM.label} htmlFor="company-address">Company Address *</label>
+							<label className={FORM.label} htmlFor="company-address">Company Address<span className={FORM.required}>*</span></label>
 							{formState.errors['company-address'] && <div className={FORM.errorBox}>{formState.errors['company-address']}</div> }
 							<Text className={FORM.input} field="company-address" id="company-address" validate={this.validateCompanyAddress} />
 							
-							<label className={FORM.label} htmlFor="company-activities">Company Activities *</label>
+							<label className={FORM.label} htmlFor="company-activities">Company Activities<span className={FORM.required}>*</span></label>
 							{formState.errors['company-activities'] && <div className={FORM.errorBox}>{formState.errors['company-activities']}</div> }
 							<Text className={FORM.input} field="company-activities" id="company-activities" validate={this.validateCompanyActivities} />
 							
-							<label className={FORM.label} htmlFor="contact-person">Contact person *</label>
+							<label className={FORM.label} htmlFor="contact-person">Contact person<span className={FORM.required}>*</span></label>
 							{formState.errors['contact-person'] && <div className={FORM.errorBox}>{formState.errors['contact-person']}</div> }
 							<Text className={FORM.input} field="contact-person" id="contact-person" validate={this.validateContactPerson} />
 							
-							<label className={FORM.label} htmlFor="position">Position *</label>
+							<label className={FORM.label} htmlFor="position">Position<span className={FORM.required}>*</span></label>
 							{formState.errors['position'] && <div className={FORM.errorBox}>{formState.errors['position']}</div> }
 							<Text className={FORM.input} field="position" id="position" validate={this.validatePosition} />
 							
-							<label className={FORM.label} htmlFor="email">E-mail *</label>
+							<label className={FORM.label} htmlFor="email">E-mail<span className={FORM.required}>*</span></label>
 							{formState.errors['email'] && <div className={FORM.errorBox}>{formState.errors['email']}</div> }
 							<Text className={FORM.input} field="email" id="email" validate={this.validateEmail} />
 							
-							<label className={FORM.label} htmlFor="mobile">Mobile *</label>
+							<label className={FORM.label} htmlFor="mobile">Mobile<span className={FORM.required}>*</span></label>
 							{formState.errors['mobile'] && <div className={FORM.errorBox}>{formState.errors['mobile']}</div> }
 							<Text className={FORM.input} field="mobile" id="mobile" validate={this.validateMobile} />
 
-							<label className={FORM.label} htmlFor="message">Message *</label>
+							<label className={FORM.label} htmlFor="message">Message<span className={FORM.required}>*</span></label>
 							{formState.errors['message'] && <div className={FORM.errorBox}>{formState.errors['message']}</div> }
-							<TextArea field="message" className={classNames(FORM.input, FORM.textarea)} id="message" validate={this.validateMessage} />
+							<div className={FORM.row}>
+								<TextArea field="message" className={classNames(FORM.input, FORM.textarea)} id="message" validate={this.validateMessage} />
+							</div>
 
 							{this.state.loading ? 
 								<LoadingAnimation />

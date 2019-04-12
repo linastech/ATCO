@@ -28,7 +28,6 @@ class ATCO extends App {
   componentDidMount(){
     Router.events.on('routeChangeStart', url => {
       NProgress.start()
-      // this.props.store.dispatch({type: 'CURRENTURL', payload: url})
     })
     Router.events.on('routeChangeComplete', url => {
       NProgress.done()

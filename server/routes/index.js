@@ -3,6 +3,7 @@ const routes = module.exports = require('next-routes')()
 routes
   .add({name: 'home', pattern: '/', page: '/home/HomePage'})
   .add({name: 'about', pattern: '/about', page: '/about/AboutPage'})
+  .add({name: 'aboutSection', pattern: '/about/:section', page: '/about/AboutPage'})
   .add({name: 'products', pattern: '/products', page: '/products/ProductsPage'})
   .add({name: 'product', pattern: '/product/:slug', page: '/product/ProductPage'})
   .add({name: 'productsSelectedCat', pattern: '/products/:marketstatus/:category', page: '/products/ProductsPage'})

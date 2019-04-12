@@ -32,8 +32,6 @@ module.exports = (app) => {
       domain = domain.join('.')
       
       query.projectData.domain = url.format({host: domain})
-
-      
   
       const subdomains = req.subdomains.filter(domain => domain != 'www')
 

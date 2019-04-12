@@ -1,7 +1,7 @@
 module.exports = {
   DB: {
-    database: '',
-    authDb: '',
+    database: 'ATCO',
+    authDb: 'admin',
   },
   server: {
     port: 5000,
